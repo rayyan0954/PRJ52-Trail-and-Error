@@ -3,11 +3,7 @@ import { apiFetch } from '../../../services/api';
 import {
   Shield, UserX, UserCheck, AlertTriangle, EyeOff, Eye, CheckCircle2, Trash2,
   Users, Package, AlertCircle, FileText, Filter, Check, X, Search,
-<<<<<<< HEAD
   TrendingUp, BarChart3, PieChart, ShoppingBag, IndianRupee
-=======
-  TrendingUp, BarChart3, PieChart, ShoppingBag, DollarSign
->>>>>>> c769b9219c78feed6b0a6a4db8622ffafcbc698e
 } from 'lucide-react';
 
 export const AdminPage = () => {
@@ -168,11 +164,7 @@ export const AdminPage = () => {
         <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-1 shadow-md">
           <div className="flex items-center justify-between text-slate-400 text-xs font-semibold uppercase">
             <span>Active Sales Volume (Sold)</span>
-<<<<<<< HEAD
             <IndianRupee className="h-4 w-4 text-sky-400" />
-=======
-            <DollarSign className="h-4 w-4 text-sky-400" />
->>>>>>> c769b9219c78feed6b0a6a4db8622ffafcbc698e
           </div>
           <span className="text-2xl font-black text-sky-400">₹{stats ? stats.active_sales_volume.toLocaleString() : 0}</span>
         </div>
@@ -282,7 +274,7 @@ export const AdminPage = () => {
 
                       {r.listing_id && (
                         <button
-                          onClick={() => handleHideListing(r.listing_id)}
+                          onClick={() => handleToggleHideListing(r.listing_id, true)}
                           className="bg-amber-950/80 hover:bg-amber-900 text-amber-200 border border-amber-800 text-xs font-bold px-4 py-2 rounded-lg flex items-center justify-center space-x-1.5 shadow"
                         >
                           <EyeOff className="h-4 w-4" />
@@ -399,24 +391,15 @@ export const AdminPage = () => {
                 <div>
                   <h2 className="text-lg font-bold text-white flex items-center space-x-2">
                     <TrendingUp className="h-5 w-5 text-sky-400" />
-<<<<<<< HEAD
-                    <span>Contractors / Recyclers Comparison</span>
-                  </h2>
-                  <p className="text-xs text-slate-400 mt-1">Comparison of platform usage for recyclers and contractors.</p>
-=======
                     <span>Viewers vs Actual Buyers / Sellers Ratio</span>
                   </h2>
                   <p className="text-xs text-slate-400 mt-1">Comparison of platform browsers (Buyers/Viewers) to material suppliers and contractors.</p>
->>>>>>> c769b9219c78feed6b0a6a4db8622ffafcbc698e
                 </div>
               </div>
 
               {/* SVG / Visual Role Comparison Bar Chart */}
               <div className="space-y-4 pt-2">
                 {stats && stats.users_by_role && (
-<<<<<<< HEAD
-                  <>                
-=======
                   <>
                     <div>
                       <div className="flex justify-between text-xs font-semibold mb-1.5">
@@ -444,7 +427,6 @@ export const AdminPage = () => {
                       </div>
                     </div>
 
->>>>>>> c769b9219c78feed6b0a6a4db8622ffafcbc698e
                     <div>
                       <div className="flex justify-between text-xs font-semibold mb-1.5">
                         <span className="text-amber-400">Contractors & Builders</span>
